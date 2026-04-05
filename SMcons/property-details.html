@@ -1,0 +1,836 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Property Details - S&M Infrastructures</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400;600;family=Playfair+Display:wght@700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles/main.css">
+    <style>
+        .property-hero {
+            height: 70vh;
+            background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.9)), url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=2070&auto=format&fit=crop') center/cover;
+            display: flex;
+            align-items: flex-end;
+            padding-bottom: 50px;
+        }
+
+        .highlight-card {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid var(--border-color);
+            padding: 30px;
+            text-align: center;
+            border-radius: 12px;
+            transition: var(--transition-smooth);
+        }
+
+        .highlight-card:hover {
+            border-color: var(--gold);
+            transform: translateY(-5px);
+        }
+
+        .highlight-icon {
+            font-size: 3rem;
+            color: var(--gold);
+            margin-bottom: 20px;
+        }
+
+        .gallery-img {
+            height: 300px;
+            object-fit: cover;
+            width: 100%;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .gallery-img:hover {
+            filter: brightness(1.2);
+        }
+
+        .amenity-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+
+        .amenity-item i {
+            color: var(--gold);
+            margin-right: 15px;
+            font-size: 1.2rem;
+        }
+
+        .location-detail {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .location-detail i {
+            color: var(--gold);
+            margin-right: 15px;
+            font-size: 1.5rem;
+        }
+
+        .contact-form {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid var(--border-color);
+            padding: 40px;
+            border-radius: 12px;
+        }
+
+        .form-control {
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid var(--border-color);
+            color: white;
+        }
+
+        .form-control:focus {
+            background: rgba(255, 255, 255, 0.1);
+            border-color: var(--gold);
+            color: white;
+        }
+
+        .form-control::placeholder {
+            color: rgba(255, 255, 255, 0.6);
+        }
+
+        .form-select {
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid var(--border-color);
+            color: white;
+        }
+
+        .form-select:focus {
+            background: rgba(255, 255, 255, 0.1);
+            border-color: var(--gold);
+            color: white;
+        }
+
+        .form-select option {
+            background: #000;
+            color: white;
+        }
+    </style>
+</head>
+
+<body class="bg-black text-white">
+
+    <nav class="navbar py-3 scrolled" id="mainNav">
+        <div class="container-fluid px-4 px-md-5 d-flex justify-content-between align-items-center">
+            <div class="logo-box">
+                <a href="index.html" class="text-decoration-none">
+                    <h2 class="fw-bold mb-0 text-white">S<span class="text-gold">&</span>M <span
+                            class="text-gold">INFRA</span></h2>
+                </a>
+            </div>
+            <div class="d-none d-lg-flex gap-5">
+                <a href="index.html" class="nav-link-custom text-decoration-none small tracking-widest fw-bold">HOME</a>
+                <a href="projects.html" class="nav-link-custom text-decoration-none small tracking-widest fw-bold">OUR
+                    PROJECTS</a>
+            </div>
+        </div>
+    </nav>
+
+    <header class="property-hero mt-5">
+        <div class="container">
+            <div class="d-flex flex-wrap gap-3 mb-3">
+                <span class="badge bg-gold text-dark px-3 py-2 fw-bold tracking-widest">PREMIUM RESIDENTIAL</span>
+                <span class="badge bg-secondary text-white px-3 py-2 fw-bold tracking-widest">RERA APPROVED</span>
+            </div>
+            <h1 class="display-3 playfair fw-bold" id="propName">Paris City</h1>
+            <p class="lead text-white-50"><i class="fa-solid fa-location-dot text-gold me-2"></i>South Wardhaman Nagar,
+                Nagpur</p>
+            <p class="text-white-50">Premium 3, 4 & 4.5 BHK Residences</p>
+        </div>
+    </header>
+
+    <section class="py-5">
+        <div class="container">
+            <div class="row g-5">
+                <div class="col-lg-8">
+                    <h2 class="playfair text-gold mb-4">Shift to Luxury</h2>
+                    <p class="text-white-50 lh-lg mb-4">
+                        Paris City offers redefined luxury living in Nagpur with spacious homes, world-class amenities,
+                        and a lifestyle built to last. Designed to evoke an emotion with its architecture, culture, and
+                        history, the project blends kaleidoscopic colors, sounds, and aromas to create an atmosphere of
+                        urban luxury.
+                    </p>
+                    <div class="mb-4">
+                        <strong class="text-gold">RERA Number:</strong> P50500049636 | P50500076938
+                    </div>
+                    <p class="text-white-50 mb-5">
+                        <strong>Here's Why Families Are Choosing Paris City.</strong><br>
+                        Step inside Nagpur's most admired address — a place where every detail is designed to elevate
+                        everyday living.
+                    </p>
+
+                    <h3 class="playfair mb-4">Exclusive Highlights</h3>
+                    <div class="row g-4 mb-5">
+                        <div class="col-md-4">
+                            <div class="highlight-card">
+                                <i class="fa-solid fa-star highlight-icon"></i>
+                                <h5>40+ World-Class Amenities</h5>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="highlight-card">
+                                <i class="fa-solid fa-users highlight-icon"></i>
+                                <h5>200+ Families Already Trust It</h5>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="highlight-card">
+                                <i class="fa-solid fa-shield-alt highlight-icon"></i>
+                                <h5>Vibrant, Gated Community Living</h5>
+                            </div>
+                        </div>
+                    </div>
+
+                    <h3 class="playfair mb-4">Built on Speed. Backed by Trust.</h3>
+                    <div class="row g-4 mb-5">
+                        <div class="col-md-6">
+                            <div class="highlight-card">
+                                <i class="fa-solid fa-clock highlight-icon"></i>
+                                <h5>Fastest Construction in Nagpur</h5>
+                                <p class="text-white-50 small">No spam. No sharing. 100% privacy guaranteed.</p>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="highlight-card">
+                                <i class="fa-solid fa-check-circle highlight-icon"></i>
+                                <h5>RERA Approved</h5>
+                                <p class="text-white-50 small">Bookings closing soon.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <h3 class="playfair mb-4">Photo Gallery</h3>
+                    <div class="row g-3 mb-5">
+                        <div class="col-md-4"><img
+                                src="https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=2070&auto=format&fit=crop"
+                                class="gallery-img" alt="Gallery 1"></div>
+                        <div class="col-md-4"><img
+                                src="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?q=80&w=2070&auto=format&fit=crop"
+                                class="gallery-img" alt="Gallery 2"></div>
+                        <div class="col-md-4"><img
+                                src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=2070&auto=format&fit=crop"
+                                class="gallery-img" alt="Gallery 3"></div>
+                        <div class="col-md-4"><img
+                                src="https://images.unsplash.com/photo-1497366811353-6870744d04b2?q=80&w=2070&auto=format&fit=crop"
+                                class="gallery-img" alt="Gallery 4"></div>
+                        <div class="col-md-4"><img
+                                src="https://images.unsplash.com/photo-1493809842364-78817add7ffb?q=80&w=2070&auto=format&fit=crop"
+                                class="gallery-img" alt="Gallery 5"></div>
+                        <div class="col-md-4"><img
+                                src="https://images.unsplash.com/photo-1484154218962-a197022b5858?q=80&w=2070&auto=format&fit=crop"
+                                class="gallery-img" alt="Gallery 6"></div>
+                    </div>
+
+                    <h3 class="playfair mb-4">World-Class Amenities for Modern Living</h3>
+                    <p class="text-white-50 mb-4">Every detail designed to enhance your lifestyle and create lasting
+                        memories.</p>
+                    <div class="row g-3 mb-5">
+                        <div class="col-md-6">
+                            <div class="amenity-item">
+                                <i class="fa-solid fa-swimming-pool"></i>
+                                <span>Infinity Pool</span>
+                            </div>
+                            <div class="amenity-item">
+                                <i class="fa-solid fa-film"></i>
+                                <span>Theatre</span>
+                            </div>
+                            <div class="amenity-item">
+                                <i class="fa-solid fa-utensils"></i>
+                                <span>Majestic Banquet</span>
+                            </div>
+                            <div class="amenity-item">
+                                <i class="fa-solid fa-star"></i>
+                                <span>Starlit Sitout</span>
+                            </div>
+                            <div class="amenity-item">
+                                <i class="fa-solid fa-table-tennis-paddle-ball"></i>
+                                <span>Indoor Badminton Court</span>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="amenity-item">
+                                <i class="fa-solid fa-futbol"></i>
+                                <span>Multipurpose Court</span>
+                            </div>
+                            <div class="amenity-item">
+                                <i class="fa-solid fa-futbol"></i>
+                                <span>Futsal Turf</span>
+                            </div>
+                            <div class="amenity-item">
+                                <i class="fa-solid fa-baseball-ball"></i>
+                                <span>Box Cricket</span>
+                            </div>
+                            <div class="amenity-item">
+                                <i class="fa-solid fa-dumbbell"></i>
+                                <span>Indoor Gym</span>
+                            </div>
+                            <div class="amenity-item">
+                                <i class="fa-solid fa-dumbbell"></i>
+                                <span>Outdoor Gym</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row g-4 mb-5">
+                        <div class="col-md-6">
+                            <h4 class="playfair mb-3">Prime Connectivity</h4>
+                            <p class="text-white-50">Located in South Wardhaman Nagar, S&M Infrastructures ensures
+                                effortless access to key destinations, including business hubs, educational
+                                institutions, shopping centers, and healthcare facilities. Enjoy a well-connected
+                                lifestyle with smooth commutes and excellent accessibility.</p>
+                        </div>
+                        <div class="col-md-6">
+                            <h4 class="playfair mb-3">Thoughtful Design</h4>
+                            <p class="text-white-50">Designed with a focus on natural light, spacious interiors, and
+                                green landscapes, every residence at Paris City embodies tranquility and sustainability.
+                                Thoughtfully planned layouts and lush surroundings create an ideal balance of comfort
+                                and eco-friendly living.</p>
+                        </div>
+                    </div>
+
+                    <h3 class="playfair mb-4">The Address That Needs No Introduction.</h3>
+                    <p class="text-white-50 mb-4">South Wardhaman Nagar isn't just a location — it's a legacy. Known for
+                        its quiet lanes, elite residents, and cultural richness, this is Nagpur's most prized
+                        neighbourhood.</p>
+
+                    <div class="row g-4 mb-5">
+                        <div class="col-md-6">
+                            <div class="location-detail">
+                                <i class="fa-solid fa-train"></i>
+                                <div>
+                                    <strong>Nagpur Railway Station</strong><br>
+                                    <span class="text-white-50">8 km</span>
+                                </div>
+                            </div>
+                            <div class="location-detail">
+                                <i class="fa-solid fa-subway"></i>
+                                <div>
+                                    <strong>Ishwar Nagar Metro Station</strong><br>
+                                    <span class="text-white-50">1.5 km</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="location-detail">
+                                <i class="fa-solid fa-plane"></i>
+                                <div>
+                                    <strong>Dr. Babasaheb Ambedkar International Airport</strong><br>
+                                    <span class="text-white-50">12 km</span>
+                                </div>
+                            </div>
+                            <div class="location-detail">
+                                <i class="fa-solid fa-shopping-bag"></i>
+                                <div>
+                                    <strong>Wardhaman Nagar Market</strong><br>
+                                    <span class="text-white-50">2 km</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <h3 class="playfair mb-4">Explore Your Layout</h3>
+                    <p class="text-white-50 mb-4">Spacious 3, 4 & 4.5 BHK residences built for modern living and
+                        timeless comfort.</p>
+                    <div class="text-center mb-5">
+                        <button class="btn btn-outline-gold px-5 py-3"
+                            onclick="alert('Floor plans will be available soon. Please enquire for details.')">Unlock
+                            Plans</button>
+                    </div>
+                </div>
+
+                <div class="col-lg-4">
+                    <div class="position-sticky" style="top: 100px;">
+                        
+                        <div class="card bg-transparent border-gold p-4 mb-4">
+                            <h4 class="playfair mb-3 text-gold">Project Availability</h4>
+                            <div class="row text-center g-3 mb-4">
+                                <div class="col-4">
+                                    <div class="p-2 border border-gold rounded">
+                                        <h3 class="text-gold mb-1" id="totalUnits">150</h3>
+                                        <small class="text-white-50">Total Units</small>
+                                    </div>
+                                </div>
+                                <div class="col-4">
+                                    <div class="p-2 border border-success rounded">
+                                        <h3 class="text-success mb-1" id="soldUnits">120</h3>
+                                        <small class="text-white-50">Sold</small>
+                                    </div>
+                                </div>
+                                <div class="col-4">
+                                    <div class="p-2 border border-warning rounded">
+                                        <h3 class="text-warning mb-1" id="availableUnits">30</h3>
+                                        <small class="text-white-50">Available</small>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <h5 class="text-gold mb-3">BHK Distribution</h5>
+                            <div class="mb-4">
+                                <div class="d-flex justify-content-between mb-2">
+                                    <span class="text-white-50">3 BHK</span>
+                                    <span class="text-gold">45/50 <small class="text-white-50">(5 left)</small></span>
+                                </div>
+                                <div class="progress mb-3" style="height: 6px;">
+                                    <div class="progress-bar bg-gold" style="width: 90%"></div>
+                                </div>
+
+                                <div class="d-flex justify-content-between mb-2">
+                                    <span class="text-white-50">4 BHK</span>
+                                    <span class="text-gold">60/70 <small class="text-white-50">(10 left)</small></span>
+                                </div>
+                                <div class="progress mb-3" style="height: 6px;">
+                                    <div class="progress-bar bg-gold" style="width: 86%"></div>
+                                </div>
+
+                                <div class="d-flex justify-content-between mb-2">
+                                    <span class="text-white-50">4.5 BHK</span>
+                                    <span class="text-gold">15/30 <small class="text-white-50">(15 left)</small></span>
+                                </div>
+                                <div class="progress mb-3" style="height: 6px;">
+                                    <div class="progress-bar bg-gold" style="width: 50%"></div>
+                                </div>
+                            </div>
+
+                            <h5 class="text-gold mb-3">Floor Availability</h5>
+                            <div class="mb-4">
+                                <div id="floorBtns" class="row g-2">
+                                    <div class="col-4">
+                                        <button class="btn btn-sm w-100" data-floor="1" onclick="selectFloor(1, this)">Floor 1</button>
+                                    </div>
+                                    <div class="col-4">
+                                        <button class="btn btn-sm w-100" data-floor="2" onclick="selectFloor(2, this)">Floor 2</button>
+                                    </div>
+                                    <div class="col-4">
+                                        <button class="btn btn-sm w-100" data-floor="3" onclick="selectFloor(3, this)">Floor 3</button>
+                                    </div>
+                                    <div class="col-4">
+                                        <button class="btn btn-sm w-100" data-floor="4" onclick="selectFloor(4, this)">Floor 4</button>
+                                    </div>
+                                    <div class="col-4">
+                                        <button class="btn btn-sm w-100" data-floor="5" onclick="selectFloor(5, this)">Floor 5</button>
+                                    </div>
+                                    <div class="col-4">
+                                        <button class="btn btn-sm w-100" data-floor="6" onclick="selectFloor(6, this)">Floor 6</button>
+                                    </div>
+                                </div>
+                                <small class="text-white-50 mt-2 d-block">Green = Available, Gold = Selected</small>
+                            </div>
+
+                            <h5 class="text-gold mb-3">Your Preferences</h5>
+                            <div class="mb-4">
+                                <select class="form-select mb-3" id="bhkPreference"
+                                    style="background: rgba(255, 255, 255, 0.1); border: 1px solid var(--border-color); color: white;">
+                                    <option value="">Select BHK Type</option>
+                                    <option value="3">3 BHK</option>
+                                    <option value="4">4 BHK</option>
+                                    <option value="4.5">4.5 BHK</option>
+                                </select>
+
+                                <select class="form-select mb-3" id="floorPreference"
+                                    style="background: rgba(255, 255, 255, 0.1); border: 1px solid var(--border-color); color: white;">
+                                    <option value="">Select Floor</option>
+                                    <option value="1">Floor 1</option>
+                                    <option value="2">Floor 2</option>
+                                    <option value="3">Floor 3</option>
+                                    <option value="4">Floor 4</option>
+                                    <option value="5">Floor 5</option>
+                                    <option value="6">Floor 6</option>
+                                </select>
+
+                                <select class="form-select" id="facingPreference"
+                                    style="background: rgba(255, 255, 255, 0.1); border: 1px solid var(--border-color); color: white;">
+                                    <option value="">Select Facing</option>
+                                    <option value="east">East Facing</option>
+                                    <option value="west">West Facing</option>
+                                    <option value="north">North Facing</option>
+                                    <option value="south">South Facing</option>
+                                </select>
+                            </div>
+
+                            <button class="btn btn-outline-gold w-100 mb-3" onclick="open3DView()">View 3D
+                                Model</button>
+                        </div>
+
+                        <div class="card bg-transparent border-gold p-4 text-center mb-4">
+                            <h4 class="playfair mb-3">Interested in this property?</h4>
+                            <p class="text-white-50 small mb-4">Secure your space before it's sold out. Our relationship
+                                managers will get in touch with you.</p>
+
+                            <ul
+                                class="list-unstyled text-start mb-4 text-white-50 small border-bottom border-secondary pb-3">
+                                <li class="mb-2"><strong class="text-white">Status:</strong> Under Construction</li>
+                                <li class="mb-2"><strong class="text-white">Area:</strong> 15,000 Sq.Ft.</li>
+                                <li class="mb-2"><strong class="text-white">Price:</strong> On Request</li>
+                                <li class="mb-2"><strong class="text-white">Type:</strong> Residential</li>
+                            </ul>
+
+                            <a href="booking.php?property=Paris City"
+                                class="btn btn-gold-fill w-100 py-3 tracking-widest mb-3">ENQUIRE NOW</a>
+                            <button class="btn btn-outline-gold w-100 py-2 tracking-widest"
+                                onclick="alert('Brochure download coming soon!')">DOWNLOAD BROCHURE</button>
+                        </div>
+
+                        <div class="text-center">
+                            <p class="text-white-50 small mb-2">Limited Availability</p>
+                            <p class="text-gold fw-bold">Only a few residences remain. Schedule your visit today.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-5 bg-dark">
+        <div class="container">
+            <h2 class="playfair text-center text-gold mb-5">Get in Touch</h2>
+            <div class="row g-5">
+                <div class="col-lg-6">
+                    <h4 class="playfair mb-4">We would love to hear from you.</h4>
+                    <p class="text-white-50 mb-4">Whether you're curious about our properties, a potential
+                        collaboration, or just want to say hello – we're here to help.</p>
+
+                    <div class="mb-4">
+                        <h5 class="text-gold">Visit Us</h5>
+                        <p class="text-white-50">S&M Infrastructures,<br>Civil Lines, Nagpur, 440026</p>
+                    </div>
+
+                    <div class="mb-4">
+                        <h5 class="text-gold">Contact</h5>
+                        <p class="text-white-50">Phone: +91 9876543210<br>Email: info@smcons.com</p>
+                    </div>
+
+                    <div class="mb-4">
+                        <h5 class="text-gold">Business Hours</h5>
+                        <p class="text-white-50">Monday - Saturday: 10:00 AM - 7:00 PM<br>Sunday: Closed</p>
+                    </div>
+                </div>
+
+                <div class="col-lg-6">
+                    <div class="contact-form">
+                        <h4 class="playfair mb-4 text-center">Send us a Message</h4>
+                        <form id="contactForm">
+                            <div class="mb-3">
+                                <input type="text" class="form-control" id="name" placeholder="Your Name" required>
+                            </div>
+                            <div class="mb-3">
+                                <input type="email" class="form-control" id="email" placeholder="Your Email" required>
+                            </div>
+                            <div class="mb-3">
+                                <input type="tel" class="form-control" id="phone" placeholder="Your Phone" required>
+                            </div>
+                            <div class="mb-3">
+                                <textarea class="form-control" id="message" rows="4" placeholder="Your Message"
+                                    required></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-gold-fill w-100 py-3 tracking-widest">SEND
+                                MESSAGE</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="py-5 bg-black border-top border-gold border-opacity-10">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-4">
+                    <h2 class="fw-bold mb-4">S<span class="text-gold">&</span>M <span class="text-gold">INFRA</span>
+                    </h2>
+                    <p class="text-muted small">Nagpur's leading real estate developer specializing in premium
+                        residential and commercial properties.</p>
+                </div>
+                <div class="col-lg-4">
+                    <h6 class="text-gold text-uppercase small fw-bold mb-4 tracking-widest">Quick Links</h6>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="index.html" class="text-muted text-decoration-none">Home</a></li>
+                        <li class="mb-2"><a href="projects.html" class="text-muted text-decoration-none">Our
+                                Projects</a></li>
+                        <li class="mb-2"><a href="legacy.html" class="text-muted text-decoration-none">Our Legacy</a>
+                        </li>
+                        <li class="mb-2"><a href="#contact-us" class="text-muted text-decoration-none">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-4 text-lg-end">
+                    <div class="d-flex gap-3 justify-content-lg-end mb-4">
+                        <a href="#" class="text-gold"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="text-gold"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-gold"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                    <p class="text-muted small">© 2026 S&M Infrastructures. All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    </footer>
+
+    
+    <div class="modal fade" id="3dModal" tabindex="-1">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content bg-black border-gold">
+                <div class="modal-header border-gold">
+                    <h5 class="modal-title text-gold playfair">3D Virtual Tour - Paris City</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body p-0">
+                    <div class="ratio ratio-16x9">
+                        <iframe src="https://planner5d.onelink.me/stDT/10ud8m3e"
+                            style="width:100%;height:100%;border:none;" allowfullscreen></iframe>
+                    </div>
+                    <div class="p-4">
+                        <h6 class="text-gold mb-3">Interactive 3D Features:</h6>
+                        <div class="row g-3">
+                            <div class="col-md-4">
+                                <div class="card bg-dark border-gold p-3 text-center">
+                                    <i class="fa-solid fa-house text-gold mb-2 fa-2x"></i>
+                                    <h6 class="text-white">360° Interior View</h6>
+                                    <small class="text-white-50">Explore every room</small>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="card bg-dark border-gold p-3 text-center">
+                                    <i class="fa-solid fa-building text-gold mb-2 fa-2x"></i>
+                                    <h6 class="text-white">Building Layout</h6>
+                                    <small class="text-white-50">See floor plans</small>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="card bg-dark border-gold p-3 text-center">
+                                    <i class="fa-solid fa-tree text-gold mb-2 fa-2x"></i>
+                                    <h6 class="text-white">Amenities View</h6>
+                                    <small class="text-white-50">Virtual walkthrough</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        let selectedFloor = null;
+
+        function selectFloor(floor, btnElement) {
+            selectedFloor = floor;
+
+            if (btnElement) {
+                btnElement.className = 'btn btn-sm w-100 btn-outline-gold';
+            }
+
+            document.getElementById('floorPreference').value = floor;
+            // Refresh status colors with selected state
+            const propertyName = new URLSearchParams(window.location.search).get('property') || 'Paris City';
+            fetch(`backend/api/property_api.php?property=${encodeURIComponent(propertyName)}`)
+                .then(resp => resp.json())
+                .then(data => {
+                    if (data.success) {
+                        renderFloorButtons(data.data);
+                    } else {
+                        renderFloorButtons(null);
+                    }
+                }).catch(() => {
+                    renderFloorButtons(null);
+                });
+        }
+
+        function open3DView() {
+            const modal = new bootstrap.Modal(document.getElementById('3dModal'));
+            modal.show();
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            const urlParams = new URLSearchParams(window.location.search);
+            const propertyName = urlParams.get('property');
+
+            if (propertyName) {
+                document.getElementById('propName').innerText = propertyName;
+                document.querySelector('a[href*="booking.php"]').href = `booking.php?property=${encodeURIComponent(propertyName)}`;
+            }
+
+            // Update availability based on property
+            updateAvailability(propertyName);
+
+            // Contact form submission
+            document.getElementById('contactForm').addEventListener('submit', function (e) {
+                e.preventDefault();
+
+                const formData = new FormData();
+                formData.append('full_name', document.getElementById('name').value);
+                formData.append('email_address', document.getElementById('email').value);
+                formData.append('phone_no', document.getElementById('phone').value);
+                formData.append('message', document.getElementById('message').value);
+
+                // Add preferences to message
+                const bhk = document.getElementById('bhkPreference').value;
+                const floor = document.getElementById('floorPreference').value;
+                const facing = document.getElementById('facingPreference').value;
+
+                let preferences = '';
+                if (bhk) preferences += `BHK: ${bhk}, `;
+                if (floor) preferences += `Floor: ${floor}, `;
+                if (facing) preferences += `Facing: ${facing}`;
+
+                if (preferences) {
+                    formData.set('message', `Preferences: ${preferences}\n\n${formData.get('message')}`);
+                }
+
+                fetch('backend/api/submit.php', {
+                    method: 'POST',
+                    headers: {
+                        'X-Requested-With': 'XMLHttpRequest'
+                    },
+                    body: formData
+                })
+                    .then(response => response.json())
+                    .then(data => {
+                        if (data.success) {
+                            alert(data.message || 'Thank you for your message. We will get back to you soon!');
+                            document.getElementById('contactForm').reset();
+                        } else {
+                            alert(data.error || 'There was an error sending your message. Please try again.');
+                        }
+                    })
+                    .catch(error => {
+                        console.error('Error:', error);
+                        alert('There was an error sending your message. Please try again.');
+                    });
+            });
+        });
+
+        function renderFloorButtons(floorStatus) {
+            for (let i = 1; i <= 6; i++) {
+                const button = document.querySelector(`#floorBtns button[data-floor='${i}']`);
+                if (!button) continue;
+
+                const status = floorStatus ? floorStatus[`floor_${i}_status`] : 'available';
+                let bg = 'rgba(197, 160, 89, 0.2)';
+                let border = '1px solid var(--gold)';
+                let color = 'var(--gold)';
+                let label = `Floor ${i}`;
+
+                if (status === 'available') {
+                    bg = '#28a745';
+                    border = '1px solid #28a745';
+                    color = '#fff';
+                    label += ' (Available)';
+                } else if (status === 'reserved') {
+                    bg = '#ffc107';
+                    border = '1px solid #ffc107';
+                    color = '#000';
+                    label += ' (Reserved)';
+                } else if (status === 'sold') {
+                    bg = '#dc3545';
+                    border = '1px solid #dc3545';
+                    color = '#fff';
+                    label += ' (Sold)';
+                }
+
+                if (selectedFloor === i) {
+                    bg = 'transparent';
+                    border = '2px solid var(--gold)';
+                    color = 'var(--gold)';
+                    label = `Floor ${i} (Selected)`;
+                }
+
+                button.style.background = bg;
+                button.style.border = border;
+                button.style.color = color;
+                button.textContent = label;
+            }
+        }
+
+        function updateAvailability(propertyName) {
+            if (!propertyName) propertyName = 'Paris City';
+
+            fetch(`backend/api/property_api.php?property=${encodeURIComponent(propertyName)}`)
+                .then(response => response.json())
+                .then(data => {
+                    if (!data.success) {
+                        throw new Error(data.error || 'No property availability data');
+                    }
+
+                    const item = data.data;
+
+                    const total = parseInt(item.total_units) || 0;
+                    const sold = parseInt(item.sold_units) || 0;
+                    const available = parseInt(item.available_units) || (total - sold);
+
+                    const bhk3Sold = parseInt(item.bhk_3_sold) || 0;
+                    const bhk3Total = parseInt(item.bhk_3_total) || 1;
+                    const bhk4Sold = parseInt(item.bhk_4_sold) || 0;
+                    const bhk4Total = parseInt(item.bhk_4_total) || 1;
+                    const bhk45Sold = parseInt(item.bhk_45_sold) || 0;
+                    const bhk45Total = parseInt(item.bhk_45_total) || 1;
+
+                    const bhk3Percent = Math.min(100, Math.round((bhk3Sold / bhk3Total) * 100));
+                    const bhk4Percent = Math.min(100, Math.round((bhk4Sold / bhk4Total) * 100));
+                    const bhk45Percent = Math.min(100, Math.round((bhk45Sold / bhk45Total) * 100));
+
+                    document.getElementById('totalUnits').textContent = total;
+                    document.getElementById('soldUnits').textContent = sold;
+                    document.getElementById('availableUnits').textContent = available;
+
+                    const bars = document.querySelectorAll('.progress-bar');
+                    if (bars[0]) bars[0].style.width = bhk3Percent + '%';
+                    if (bars[1]) bars[1].style.width = bhk4Percent + '%';
+                    if (bars[2]) bars[2].style.width = bhk45Percent + '%';
+
+                    const bhkTexts = document.querySelectorAll('.d-flex.justify-content-between');
+                    if (bhkTexts[0]) bhkTexts[0].innerHTML = `<span class="text-white-50">3 BHK</span><span class="text-gold">${bhk3Sold}/${bhk3Total} <small class="text-white-50">(${bhk3Total - bhk3Sold} left)</small></span>`;
+                    if (bhkTexts[1]) bhkTexts[1].innerHTML = `<span class="text-white-50">4 BHK</span><span class="text-gold">${bhk4Sold}/${bhk4Total} <small class="text-white-50">(${bhk4Total - bhk4Sold} left)</small></span>`;
+                    if (bhkTexts[2]) bhkTexts[2].innerHTML = `<span class="text-white-50">4.5 BHK</span><span class="text-gold">${bhk45Sold}/${bhk45Total} <small class="text-white-50">(${bhk45Total - bhk45Sold} left)</small></span>`;
+
+                    renderFloorButtons(item);
+                })
+                .catch(error => {
+                    console.error('Availability API error:', error);
+                    // Fallback to static data if API fails
+                    const fallback = {
+                        total: 150,
+                        sold: 120,
+                        available: 30,
+                        bhk: {
+                            '3': { sold: 45, total: 50 },
+                            '4': { sold: 60, total: 70 },
+                            '4.5': { sold: 15, total: 30 }
+                        }
+                    };
+                    document.getElementById('totalUnits').textContent = fallback.total;
+                    document.getElementById('soldUnits').textContent = fallback.sold;
+                    document.getElementById('availableUnits').textContent = fallback.available;
+
+                    const bhk3Percent = (fallback.bhk['3'].sold / fallback.bhk['3'].total) * 100;
+                    const bhk4Percent = (fallback.bhk['4'].sold / fallback.bhk['4'].total) * 100;
+                    const bhk45Percent = (fallback.bhk['4.5'].sold / fallback.bhk['4.5'].total) * 100;
+
+                    document.querySelectorAll('.progress-bar')[0].style.width = bhk3Percent + '%';
+                    document.querySelectorAll('.progress-bar')[1].style.width = bhk4Percent + '%';
+                    document.querySelectorAll('.progress-bar')[2].style.width = bhk45Percent + '%';
+
+                    const bhkTexts = document.querySelectorAll('.d-flex.justify-content-between');
+                    bhkTexts[0].innerHTML = `<span class="text-white-50">3 BHK</span><span class="text-gold">45/50 <small class="text-white-50">(5 left)</small></span>`;
+                    bhkTexts[1].innerHTML = `<span class="text-white-50">4 BHK</span><span class="text-gold">60/70 <small class="text-white-50">(10 left)</small></span>`;
+                    bhkTexts[2].innerHTML = `<span class="text-white-50">4.5 BHK</span><span class="text-gold">15/30 <small class="text-white-50">(15 left)</small></span>`;
+
+                    renderFloorButtons({});
+                });
+        }
+    </script>
+</body>
+
+</html>
